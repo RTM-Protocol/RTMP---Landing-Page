@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #1a1a1a;
+  --bg-tertiary: #2d2d2d;
+  --text-primary: #ffffff;
+  --text-secondary: #cccccc;
+  --text-muted: #777777;
+  --accent-orange: #d4662f;
+  --accent-orange-hover: #b8551f;
+  --accent-emergency: #e74c3c;
+  --accent-green: #27ae60;
+  --border-subtle: #2a2a2a;
+
+  --protocol-pv: #c0392b;
+  --protocol-so: #d4962f;
+  --protocol-er: #27ae60;
+  --protocol-rc: #3498db;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-secondary);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--text-primary);
+  font-style: normal;
+  text-shadow: none;
+}
+
+/* Subtle grid texture used on hero / section backgrounds */
+.grid-texture {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Section spacing helpers: 56px mobile / 80px desktop */
+.section-pad {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+@media (min-width: 768px) {
+  .section-pad {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+
+.container-narrow {
+  width: 100%;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+@media (min-width: 768px) {
+  .container-narrow {
+    max-width: 1080px;
+  }
+}
+
+details > summary {
+  list-style: none;
+  cursor: pointer;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+/* The app's pulsing orange shield: gentle scale + orange glow on a 3s loop. */
+@keyframes shield-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 8px rgba(212, 102, 47, 0.4));
+  }
+  50% {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 16px rgba(212, 102, 47, 0.7));
+  }
+}
+
+.shield-pulse {
+  animation: shield-pulse 3s ease-in-out infinite;
+  transform-origin: center;
+  will-change: transform, filter;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shield-pulse {
+    animation: none;
+  }
+}
+
+/* Attention pulse for primary CTAs: gentle scale + orange glow on a 2s loop. */
+@keyframes btn-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(212, 102, 47, 0);
+  }
+  50% {
+    transform: scale(1.02);
+    box-shadow: 0 0 22px 4px rgba(212, 102, 47, 0.55);
+  }
+}
+
+.btn-pulse {
+  animation: btn-pulse 2s ease-in-out infinite;
+  transform-origin: center;
+  will-change: transform, box-shadow;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-pulse {
+    animation: none;
+  }
+}
