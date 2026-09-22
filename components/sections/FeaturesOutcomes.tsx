@@ -17,9 +17,9 @@ const ROWS: { feature: string; outcome: ReactNode }[] = [
       "You start seeing your patterns in real numbers, true data — not wishy-washy vibes. The fog lifts because you can finally measure it.",
   },
   {
-    feature: "4 SPECIALISED PROTOCOLS",
+    feature: "5 SPECIALISED PROTOCOLS",
     outcome:
-      "Anger, stress, motivation collapse, dark thinking — each has its own field manual. Not one generic plan.",
+      "Burnout, anger, stress, depression, imposter syndrome — each has its own field manual. Not one generic plan.",
   },
   {
     feature: "EMERGENCY TOOLS",

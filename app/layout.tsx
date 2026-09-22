@@ -12,14 +12,14 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Rebuild The Man Protocol — A tactical field manual for men",
   description:
-    "You're not broken. You're untrained. A 4-protocol field manual built for men. Daily missions. Measurable progress. Zero fluff.",
+    "You're not broken. You're untrained. A 5-protocol field manual built for men. Daily missions. Measurable progress. Zero fluff.",
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_BASE_URL || "https://rebuildthemanprotocol.com",
   ),
   openGraph: {
     title: "Rebuild The Man Protocol",
     description:
-      "A 4-protocol field manual built for men. Daily missions. Measurable progress. Zero fluff.",
+      "A 5-protocol field manual built for men. Daily missions. Measurable progress. Zero fluff.",
     type: "website",
   },
   robots: { index: true, follow: true },

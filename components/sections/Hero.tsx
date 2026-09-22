@@ -13,9 +13,18 @@ export function Hero({ remaining }: { remaining: number }) {
         </h1>
 
         <p className="mt-6 max-w-2xl text-base leading-relaxed text-text-secondary sm:text-lg">
-          A 4-protocol field manual built for men who are done with therapy
+          A 5-protocol field manual built for men who are done with therapy
           chairs, motivational quotes, and being told to &ldquo;just talk about
-          it.&rdquo; Daily missions. Measurable progress. Zero fluff.
+          it.&rdquo;
+          <br />
+          <br />
+          Daily missions.
+          <br />
+          <br />
+          Measurable progress.
+          <br />
+          <br />
+          Zero fluff.
         </p>
 
         <div className="mt-10 flex w-full max-w-sm flex-col items-center gap-5">

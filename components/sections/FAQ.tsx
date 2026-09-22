@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { LAUNCH_CONFIG } from "@/lib/launch-config";
 
 const FAQS: { q: string; a: ReactNode }[] = [
   {
@@ -8,7 +9,7 @@ const FAQS: { q: string; a: ReactNode }[] = [
   },
   {
     q: "What is \u201cfounding member\u201d?",
-    a: "The first 40 men to buy at the founding price (£149). You get a private forum with other founding members, direct access to me for product input, and lifetime price-locked access — even when the price increases to £249 later.",
+    a: `The first 40 men to buy at the founding price (£${LAUNCH_CONFIG.FOUNDING_PRICE_GBP}). You get a private forum with other founding members, direct access to me for product input, and lifetime price-locked access — even when the price increases to £${LAUNCH_CONFIG.STANDARD_PRICE_GBP} later.`,
   },
   {
     q: "How does access work after I pay?",
@@ -16,7 +17,7 @@ const FAQS: { q: string; a: ReactNode }[] = [
   },
   {
     q: "How long until I see results?",
-    a: "Most men report meaningful shifts within 7-14 days of consistent daily missions. Full protocol cycles are 30 days.",
+    a: "Most men report meaningful shifts within 7-14 days of consistent daily missions. The flagship runs 14 days; supporting protocols offer 7, 14, or 30-day options.",
   },
   {
     q: "What if it doesn't work for me?",
@@ -47,7 +48,7 @@ const FAQS: { q: string; a: ReactNode }[] = [
   },
   {
     q: "What if the founding round is full when I get here?",
-    a: "You can join the waitlist for the next round at the standard price (£249).",
+    a: `You can join the waitlist for the next round at the standard price (£${LAUNCH_CONFIG.STANDARD_PRICE_GBP}).`,
   },
 ];
 

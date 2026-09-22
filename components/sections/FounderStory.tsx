@@ -57,13 +57,13 @@ export function FounderStory() {
         <div className="mt-4">
           {BLOCKS.map((block) => (
             <div key={block.heading} className="mt-12 first:mt-12">
-              <h3 className="font-mono text-base font-bold uppercase tracking-tight text-accent-orange sm:text-lg">
+              <h3 className="text-center font-mono text-base font-bold uppercase tracking-tight text-accent-orange sm:text-lg">
                 {block.heading}
               </h3>
               {block.paragraphs.map((para, i) => (
                 <p
                   key={i}
-                  className="mt-5 text-[17px] leading-[1.75] text-text-primary sm:text-[19px]"
+                  className="mt-5 text-justify text-[17px] leading-[1.75] text-text-primary sm:text-[19px]"
                 >
                   {para}
                 </p>

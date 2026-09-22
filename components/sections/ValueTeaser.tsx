@@ -1,13 +1,27 @@
 import { LAUNCH_CONFIG } from "@/lib/launch-config";
 import { spotsToneClass } from "@/lib/spots";
 
-const ITEMS: { label: string; price: string }[] = [
-  { label: "4 Core Protocols (120 missions)", price: "£397" },
-  { label: "Emergency Tools Kit (always free)", price: "£147" },
-  { label: "Field Notes + Progress Dashboard", price: "£127" },
-  { label: "Lifetime Updates — every new protocol", price: "£197" },
-  { label: "Founding Members Forum", price: "£197" },
+const ITEMS: { label: string; price: number }[] = [
+  { label: "5 Protocols (134 missions)", price: 497 },
+  { label: "Emergency Tools Kit (always free)", price: 147 },
+  { label: "Field Notes + Progress Dashboard", price: 127 },
+  { label: "Lifetime Updates — every new protocol", price: 197 },
+  { label: "Founding Members Forum", price: 197 },
+  { label: "PDF Workbook Companion (shipping soon)", price: 99 },
 ];
+
+const stackTotal = ITEMS.reduce((sum, item) => sum + item.price, 0);
+
+// STACK_VALUE_GBP is the denominator for the advertised discounts, so it must
+// stay equal to the summed line items. Surface any drift loudly in dev/build.
+if (
+  process.env.NODE_ENV !== "production" &&
+  stackTotal !== LAUNCH_CONFIG.STACK_VALUE_GBP
+) {
+  console.error(
+    `Value stack mismatch: line items sum to £${stackTotal} but STACK_VALUE_GBP is £${LAUNCH_CONFIG.STACK_VALUE_GBP}. Update the constant to match, or fix the line items.`,
+  );
+}
 
 function ValueRow({
   label,
@@ -42,17 +56,21 @@ export function ValueTeaser({ remaining }: { remaining: number }) {
     <section className="section-pad border-b border-border-subtle bg-bg-secondary">
       <div className="mx-auto max-w-2xl px-5 text-center">
         <h2 className="font-mono text-2xl font-bold uppercase tracking-tight text-text-primary sm:text-3xl">
-          Stacked Value: £1,065
+          Stacked Value: £{stackTotal.toLocaleString("en-GB")}
         </h2>
 
         <div className="mt-8 space-y-3 text-left">
           {ITEMS.map((item) => (
-            <ValueRow key={item.label} label={item.label} price={item.price} />
+            <ValueRow
+              key={item.label}
+              label={item.label}
+              price={`£${item.price.toLocaleString("en-GB")}`}
+            />
           ))}
           <div className="pt-2">
             <ValueRow
               label="TOTAL VALUE"
-              price="£1,065"
+              price={`£${stackTotal.toLocaleString("en-GB")}`}
               strike={false}
               bold
             />

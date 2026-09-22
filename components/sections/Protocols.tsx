@@ -6,19 +6,20 @@ const PROTOCOLS: {
   phases: string[];
 }[] = [
   {
-    name: "PRESSURE VALVE",
+    name: "REBUILD THE MAN PROTOCOL",
     code: "// PROTOCOL 01",
-    color: "var(--protocol-pv)",
-    tagline: "For the anger you can't release in healthy ways.",
+    color: "var(--protocol-rtm)",
+    tagline:
+      "The 14-day flagship. Complete mental reconstruction for men running on empty.",
     phases: [
-      "Days 1–7: Foundation — identify triggers, body signals, basic tools",
-      "Days 8–14: Skills — communication, breathing, reframing, physical outlets",
-      "Days 15–21: Application — boundaries, journaling, environmental changes",
-      "Days 22–30: Integration — advanced techniques, stress testing, system building",
+      "Days 1–4: Assessment — foundation assessment, energy audit, non-negotiable standards, deliberate silence",
+      "Days 5–9: Excavation — fear inventory, physical baseline, accountability reset, mental clarity, values alignment",
+      "Days 10–13: Reconstruction — purpose statement, failure analysis, discipline practice, gratitude reframe",
+      "Day 14: Lock-In — the rebuild commitment",
     ],
   },
   {
-    name: "SYSTEM OVERLOAD",
+    name: "SYSTEM OVERLOAD PROTOCOL",
     code: "// PROTOCOL 02",
     color: "var(--protocol-so)",
     tagline: "For the stress eating your sleep, focus, and relationships.",
@@ -30,10 +31,23 @@ const PROTOCOLS: {
     ],
   },
   {
-    name: "ENGINE RESTART",
+    name: "PRESSURE VALVE PROTOCOL",
     code: "// PROTOCOL 03",
+    color: "var(--protocol-pv)",
+    tagline: "For the anger you can't release in healthy ways.",
+    phases: [
+      "Days 1–7: Foundation — identify triggers, body signals, basic tools",
+      "Days 8–14: Skills — communication, breathing, reframing, physical outlets",
+      "Days 15–21: Application — boundaries, journaling, environmental changes",
+      "Days 22–30: Integration — advanced techniques, stress testing, system building",
+    ],
+  },
+  {
+    name: "ENGINE RESTART PROTOCOL",
+    code: "// PROTOCOL 04",
     color: "var(--protocol-er)",
-    tagline: "For the motivation that disappeared and never came back.",
+    tagline:
+      "For the low mood and flatness that won't lift. For when getting up is the hard part.",
     phases: [
       "Days 1–7: Minimum-viable-day protocol",
       "Days 8–14: Momentum stacks and micro-wins",
@@ -42,10 +56,11 @@ const PROTOCOLS: {
     ],
   },
   {
-    name: "REALITY CALIBRATION",
-    code: "// PROTOCOL 04",
+    name: "REALITY CALIBRATION PROTOCOL",
+    code: "// PROTOCOL 05",
     color: "var(--protocol-rc)",
-    tagline: "For the dark thinking that's started to feel normal.",
+    tagline:
+      "For the voice that says you're a fraud, no matter what you've achieved.",
     phases: [
       "Days 1–7: Thought-vs-fact drills",
       "Days 8–14: Evidence logs and reframes",
@@ -60,18 +75,20 @@ export function Protocols() {
     <section className="section-pad border-b border-border-subtle">
       <div className="container-narrow">
         <h2 className="text-center text-2xl font-bold uppercase tracking-tight text-text-primary sm:text-4xl">
-          Four Protocols. One Operating System.
+          Five Protocols. One Operating System.
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-center leading-relaxed text-text-secondary">
-          Each protocol is a structured 30-day mission. 120 daily missions in
-          total across all four. Daily check-ins, daily actions, daily wins.
+          The flagship runs 14 days. Each supporting protocol offers 7, 14, or
+          30-day options. 134 daily missions in total across all five.
         </p>
 
         <div className="mt-10 grid grid-cols-1 gap-5 lg:grid-cols-2">
-          {PROTOCOLS.map((p) => (
+          {PROTOCOLS.map((p, i) => (
             <article
               key={p.name}
-              className="border border-border-subtle bg-bg-secondary p-6 sm:p-8"
+              className={`border border-border-subtle bg-bg-secondary p-6 sm:p-8 ${
+                i === 0 ? "lg:col-span-2" : ""
+              }`}
               style={{ borderLeft: `3px solid ${p.color}` }}
             >
               <p

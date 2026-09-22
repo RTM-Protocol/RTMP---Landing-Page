@@ -6,11 +6,11 @@ export const LAUNCH_CONFIG = {
   // runtime via the `site_state` row in Supabase (no redeploy needed).
   FOUNDING_ROUND_OPEN: true,
   // Standard post-founding price (used in marketing copy and after sellout)
-  STANDARD_PRICE_GBP: 249,
-  STANDARD_PRICE_USD: 329,
+  STANDARD_PRICE_GBP: 397,
   // Founding price
   FOUNDING_PRICE_GBP: 149,
-  FOUNDING_PRICE_USD: 197,
+  // Total stated value of the stack, used to derive advertised discounts.
+  STACK_VALUE_GBP: 1264,
 } as const;
 
 export type LaunchConfig = typeof LAUNCH_CONFIG;

@@ -35,7 +35,7 @@ The Service is designed for men. We do not turn anyone away, but the content, la
 
 ## 4. What the Service is — and what it is not
 
-Rebuild the Man Protocol is a self-help application providing structured, action-based protocols for men. The App offers daily missions across multiple protocols including anger regulation, stress management, motivation and imposter syndrome support.
+Rebuild the Man Protocol is a self-help application providing structured, action-based protocols for men. The App offers daily missions across multiple protocols including burnout recovery, anger regulation, stress management, depression support, and imposter syndrome support.
 
 The Service is a self-help tool. It is designed to complement, not replace, professional mental health care. It is not a medical device, it does not provide medical advice, diagnosis or treatment, and no part of it should be understood as clinical care.
 

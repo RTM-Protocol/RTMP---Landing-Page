@@ -7,7 +7,7 @@ function CrossShield() {
       height={48}
       viewBox="0 0 24 24"
       fill="none"
-      stroke="var(--accent-emergency)"
+      stroke="var(--accent-orange)"
       strokeWidth={1.8}
       strokeLinecap="square"
       strokeLinejoin="miter"
@@ -15,7 +15,7 @@ function CrossShield() {
     >
       <path
         d="M12 2 4 5v6c0 5 3.5 8.5 8 11 4.5-2.5 8-6 8-11V5l-8-3Z"
-        fill="var(--accent-emergency)"
+        fill="var(--accent-orange)"
         fillOpacity={0.1}
       />
       <path d="M12 7.5v7M8.5 11h7" />

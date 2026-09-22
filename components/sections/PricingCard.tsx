@@ -54,9 +54,6 @@ export function PricingCard({
                 £{LAUNCH_CONFIG.FOUNDING_PRICE_GBP}
               </span>
             </div>
-            <p className="mt-1 text-center font-mono text-sm text-text-muted">
-              / ${LAUNCH_CONFIG.FOUNDING_PRICE_USD} USD
-            </p>
 
             <ul className="mt-7 space-y-3">
               {BULLETS.map((b) => (
